@@ -75,7 +75,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>org.foobarspam.furnace.main.App</mainClass>
+              <mainClass>edu.estatuas.main.App</mainClass>
             </manifest>
             <manifestEntries>
               <url>${project.url}</url>
