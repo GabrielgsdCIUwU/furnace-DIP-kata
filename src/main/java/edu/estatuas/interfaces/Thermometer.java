@@ -1,5 +1,7 @@
 package edu.estatuas.interfaces;
 
+import edu.estatuas.types.RoomTemperature;
+
 public interface Thermometer {
-    void read();
+    double read(RoomTemperature temperature);
 }
