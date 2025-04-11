@@ -32,4 +32,28 @@ public class GasHeaterTest {
         
         assertEquals(19, temperature.getTemperature(), 0.01);
     }
+
+    @Test
+    public void testGasHeaterEngageWithIncrement() {
+        Heater gasHeater = new GasHeater();
+
+        RoomTemperature temperature = RoomTemperature.getInstance();
+        temperature.setTemperature(20.0);
+
+        gasHeater.engage(temperature, 5.0);
+
+        assertEquals(25, temperature.getTemperature(), 0.01);
+    }
+
+    @Test
+    public void testGasHeaterDisengageWithDecrement() {
+        Heater gasHeater = new GasHeater();
+
+        RoomTemperature temperature = RoomTemperature.getInstance();
+        temperature.setTemperature(20.0);
+
+        gasHeater.disengage(temperature, 5.0);
+
+        assertEquals(15, temperature.getTemperature(), 0.01);
+    }
 }
