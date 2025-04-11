@@ -21,4 +21,12 @@ public class RoomTemperature {
     public double getTemperature() {
         return temperature;
     }
+
+    public void incrementTemperature(double increment) {
+        this.temperature += increment;
+    }
+
+    public void decrementTemperature(double decrement) {
+        this.temperature -= decrement;
+    }
 }
